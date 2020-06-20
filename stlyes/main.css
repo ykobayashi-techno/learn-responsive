@@ -1,0 +1,13 @@
+/* スマホで見ると青い */
+@media all and (max-width: 767px) {
+    h1 {
+        color: #f00;
+      }
+}
+
+/* PCで見ると青い */
+@media all and (min-width: 980px) {
+    h1 {
+        color: #0000ff;
+      }
+}
