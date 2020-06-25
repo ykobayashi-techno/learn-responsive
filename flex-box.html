@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link href="stlyes/normalize.css" rel="stylesheet" type="text/css" >
+    <link href="stlyes/main.css" rel="stylesheet" type="text/css" >
+    <link href="stlyes/menu.css" rel="stylesheet" type="text/css" >
+    <link href="stlyes/flex-box.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menuContainer">
+            <h1 class="title">flexbox</h1>
+            <nav class="menu">
+                <ul class="menu-ul">
+                    <li class="menu-li"><a href="./index.html">TOP</a></li>
+                    <li class="menu-li"><a href="./menu.html">メディアクエリ</a></li>
+                    <li class="menu-li"><a href="./flex-box.html">flexbox</a></li>
+                    <li class="menu-li"><a href="./grid.html">grid</a></li>
+                    <li class="menu-li"><a href="./others.html">others</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <h2>flexbox</h2>
+            <p>floatじゃないやつ</p>
+            <p>
+                ルートのdisplay要素にflexboxを指定する。<br />
+                画面幅に合わせて、指定したスタイルや並び順で並びを制御できる。<br />
+                また、子供のコンポーネントでflexを指定してやると上下左右の中央ぞろえがとても簡単にできる
+            </p>
+            <p>
+                このページも、ページ幅によってflexboxのdirectionをrow(横並び)とcolumn(縦並び)に変わるようにしている
+            </p>
+            <div class="flexContainer">
+                <div class="flexContainer-box">
+                    <p>item1</p>
+                </div>
+                <div class="flexContainer-box">
+                    <p>item2</p>
+                </div>
+                <div class="flexContainer-box">
+                    <p>item3</p>
+                </div>
+                <div class="flexContainer-box">
+                    <p>item4</p>
+                </div>
+            </div>
+
+            <p>
+                flex-growの設定等、画面サイズに余裕があるときなど、要素の伸び縮みの程度の設定がそれぞれにできる
+            </p>
+
+            <div class="flexContainer2">
+                <div class="flexContainer2-box">
+                    <p>item1</p>
+                </div>
+                <div class="flexContainer2-box">
+                    <p>item2</p>
+                </div>
+                <div class="flexContainer2-box">
+                    <p>item3</p>
+                </div>
+                <div class="flexContainer2-box growup">
+                    <p>item4</p>
+                </div>
+            </div>
+
+            <div class="flexContainer2">
+                <div class="flexContainer2-box">
+                    <p>item5</p>
+                </div>
+                <div class="flexContainer2-box">
+                    <p>item6</p>
+                </div>
+                <div class="flexContainer2-box">
+                    <p>item7</p>
+                </div>
+                <div class="flexContainer2-box growup">
+                    <p>item8</p>
+                </div>
+            </div>
+
+            <p><a href="https://developer.mozilla.org/ja/docs/Glossary/Flexbox">MDN - FlexBox</a></p>
+            <p><a href="https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Flexbox">MDN - なぜフレックスボックスなのか？
+            </a></p>
+        </div>
+    </div>
+</body>
+</html>

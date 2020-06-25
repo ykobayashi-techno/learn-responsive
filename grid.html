@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <link href="stlyes/normalize.css" rel="stylesheet" type="text/css" >
+    <link href="stlyes/main.css" rel="stylesheet" type="text/css" >
+    <link href="stlyes/menu.css" rel="stylesheet" type="text/css" >
+    <link href="stlyes/grid.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menuContainer">
+            <h1 class="title">grid</h1>
+            <nav class="menu">
+                <ul class="menu-ul">
+                    <li class="menu-li"><a href="./index.html">TOP</a></li>
+                    <li class="menu-li"><a href="./menu.html">メディアクエリ</a></li>
+                    <li class="menu-li"><a href="./flex-box.html">flexbox</a></li>
+                    <li class="menu-li"><a href="./grid.html">grid</a></li>
+                    <li class="menu-li"><a href="./others.html">others</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <h2>grid</h2>
+            <p>
+                ルートのdisplay要素にgridを指定する。<br />
+                単純なグリッドから、ちょっと複雑なレイアウトまで割と自由に組める
+            </p>
+            <div class="gridContainer">
+                <div class="gridContainer-box">
+                    <p>item1</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item2</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item3</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item4</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item5</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item6</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item7</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item8</p>
+                </div>
+                <div class="gridContainer-box">
+                    <p>item9</p>
+                </div>
+            </div>
+            
+            <p>以下のようにエリアに名前を付けてgridの設定を行うこともできる</p>
+
+            <div class="freeGgridContainer">
+                <div class="freeGgridContainer-box ib">
+                    ib
+                </div>
+                <div class="freeGgridContainer-box sq">
+                    sq
+                </div>
+                <div class="freeGgridContainer-box jb">
+                    jb
+                </div>
+                <div class="freeGgridContainer-box es">
+                    es
+                </div>
+                <div class="freeGgridContainer-box lb">
+                    lb
+                </div>
+            </div>
+
+<pre class="code">
+/* grid-template-areasで適当なラベルを付けてレイアウト　空の部分には.を使える */
+.freeGgridContainer {
+    display: grid;
+    grid-template-areas:    "es es es lb lb lb lb"
+                            "ib .. .. .. .. .. .."
+                            "ib .. .. sq sq .. .."
+                            "ib .. .. sq sq .. .."
+                            "ib .. .. .. .. .. .."
+                            "ib jb jb jb jb jb jb";
+
+    grid-template-rows: repeat(6, 3rem);
+    grid-template-columns: repeat(7, 3rem);
+}
+/* 上記grid-template-areas:で指定している名前に当たる要素を用意してgrid-areaで同じ名前を付ける */
+.ib {
+    grid-area: ib;
+    background-color: aqua;
+}
+.sq {
+    grid-area: sq;
+    background-color: yellow;
+}
+.
+.
+.
+</pre>
+
+            <p><a href="https://developer.mozilla.org/ja/docs/Web/CSS/grid">MDN - grid</a></p>
+            <p><a href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">MDN - グリッドとは何か？
+            </a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+.flexContainer {
+    display: flex; /* flex-boxの有効化 */
+    justify-content: start; /* 均等に配置 */
+    flex-wrap: wrap; /* 折り返しの有効 */
+}
+
+.flexContainer-box {
+    width: 10em;
+    height: 6em;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    margin: 0.2em;
+    flex-grow: 1;
+
+    /* コンテナの中でflexの設定をして以下のプロパティを設定すると上下左右中央寄せが簡単 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexContainer-box p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.flexContainer2 {
+    display: flex; /* flex-boxの有効化 */
+    justify-content: start; /* 均等に配置 */
+    flex-wrap: wrap; /* 折り返しの有効 */
+}
+
+.flexContainer2-box {
+    width: 10em;
+    height: 6em;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    margin: 0.2em;
+    flex-grow: 1;
+
+    /* コンテナの中でflexの設定をして以下のプロパティを設定すると上下左右中央寄せが簡単 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexContainer2-box.growup {
+    flex-grow: 2;
+}
+
+.flexContainer2-box p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .flexContainer-box {
+        width: 100%;
+        height: 10em;
+        margin: 0.2em;
+    }
+}

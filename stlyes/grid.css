@@ -1,0 +1,72 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: 500px 1fr 2fr;
+    grid-auto-rows: 150px;
+}
+
+.gridContainer-box {
+    border: 1px solid #666;
+    box-sizing: border-box;
+    margin: 0.2em;
+
+    /* コンテナの中でflexの設定をして以下のプロパティを設定すると上下左右中央寄せが簡単 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContainer-box p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.freeGgridContainer {
+    display: grid;
+
+    grid-template-areas: "es es es lb lb lb lb"
+                         "ib .. .. .. .. .. .."
+                         "ib .. .. sq sq .. .."
+                         "ib .. .. sq sq .. .."
+                         "ib .. .. .. .. .. .."
+                         "ib jb jb jb jb jb jb";
+
+    grid-template-rows: repeat(6, 3rem);
+    grid-template-columns: repeat(7, 3rem);
+}
+
+.freeGgridContainer-box {
+    border: 1px solid #666;
+    box-sizing: border-box;
+
+    /* コンテナの中でflexの設定をして以下のプロパティを設定すると上下左右中央寄せが簡単 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.freeGgridContainer-box.ib {
+    grid-area: ib;
+    background-color: aqua;
+}
+
+.freeGgridContainer-box.sq {
+    grid-area: sq;
+    background-color: yellow;
+}
+
+.freeGgridContainer-box.jb {
+    grid-area: jb;
+    background-color: blue;
+}
+
+.freeGgridContainer-box.es {
+    grid-area: es;
+    background-color: green;
+}
+
+.freeGgridContainer-box.lb  {
+    grid-area: lb;
+    background-color: orange;
+}

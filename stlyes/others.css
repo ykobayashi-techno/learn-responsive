@@ -1,0 +1,53 @@
+.boxContent {
+    display: flex;
+    justify-content: start; /* 均等に配置 */
+    flex-wrap: wrap; /* 折り返しの有効 */
+}
+
+.boxContent .box {
+    margin: 0.5em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.boxContent .box p{
+    width: 100%;
+    text-align: center;
+}
+
+.normalBox {
+    /* 通常のbox-sizing */
+    box-sizing: content-box;
+    width: 300px;
+    height: 300px;
+
+    border: 5px solid black;
+}
+
+.borderBox {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+
+    border: 5px solid black;
+}
+
+
+.floatContent {
+    overflow: hidden;
+}
+
+.floatBox {
+    margin-right: 0.5em;
+    border: 1px solid gray;
+}
+.floatBox img {
+    float: left;
+    margin: 0.5em;
+}
+.floatBox p{
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-right: 1em;
+}

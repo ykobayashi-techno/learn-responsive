@@ -2,54 +2,9 @@ html,body  {
     margin: 0;
 }
 
-.kv {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    background-image: url(../image/img2.jpg);
-    background-position: center center;
-    background-size: cover;
-}
-
-.kv-texts {
-    position: absolute;
-    left: 4%;
-    top: 17%;
-}
-
-.kv-texts-title {
-    margin: 0;
-    font-size: 34px;
-    font-weight: bold;
-}
-
-.kv-texts-p {
-    margin: 0;
-    padding-top: 20px;
-    font-size: 22px;
-    line-height: 1.4;
-    width: 520px;
-}
-
-/* スマホで見ると青い */
-@media all and (max-width: 767px) {
-    .kv {
-        height: 600px;
-        background-position: left center;
-    }
-
-    .kv-texts {
-        top: 19%;
-        width: 64%;
-    }
-
-    .kv-texts-title {
-        font-size: 28px;
-    }
-
-    .kv-texts-p {
-        padding-top: 15px;
-        font-size: 18px;
-        width: 100%;
-    }
+.code {
+    margin: 0.2em;
+    padding: 0.5em;
+    border: 1px solid black;
+    box-sizing: content-box; 
 }

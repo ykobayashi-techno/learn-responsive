@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
+    <title>Test page</title>
     <link href="stlyes/normalize.css" rel="stylesheet" type="text/css" >
     <link href="stlyes/main.css" rel="stylesheet" type="text/css" >
     <link href="stlyes/menu.css" rel="stylesheet" type="text/css" >
@@ -11,7 +11,8 @@
 <body>
     <div class="wrapper">
         <div class="menuContainer">
-            <h1 class="title">CSS学習</h1>
+            <h1 class="title">メディアクエリ</h1>
+
             <nav class="menu">
                 <ul class="menu-ul">
                     <li class="menu-li"><a href="./index.html">TOP</a></li>
@@ -24,10 +25,25 @@
         </div>
 
         <div>
-            <p>
-                便利なCSSなどがあることは知っているが、突っ込んでちゃんと調べたことがないため、一度それらについて少し詳しくしらべて、ちゃんと把握をする
-            </p>
+            <h2>メディアクエリ</h2>
+            <p>メディアクエリを使って端末のサイズに合わせてCSSの値を切り替える</p>
+            <p>以下のように、@media screen and (条件)と書くことで画面幅を変えたときに切り替わりが起きる</p>
+            <pre class="code">
+.title {
+    font-size: 1.8rem;
+    margin: 0px;
+    padding: 1em;
+}
+
+@media screen and (max-width: 767px) {
+    .title {
+        font-size: 1.2rem;
+    }
+}</pre>
         </div>
+
+        <p>条件は画面幅だけではなく、端末の向きなどの判定もある</p>
+        <p><a href="https://developer.mozilla.org/ja/docs/Web/CSS/Media_Queries/Using_media_queries">MDN - メディアクエリ</a></p>
     </div>
 </body>
 </html>
